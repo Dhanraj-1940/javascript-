@@ -1,0 +1,17 @@
+#menu{
+    float: left;
+}
+
+#form{
+    margin-left: 74%;
+}
+
+#title{
+    padding-left: 1%;
+}
+
+#searchTxt{
+    height: 2.0vw;
+    padding-bottom: 0.2vw;
+    margin-right: 0.5vw;
+}
