@@ -29,12 +29,16 @@ xhr.onload = function() {
             //console.log(i)
             let title = response.articles[i].title;
             let content = response.articles[i].content;
+            let slice = content.slice(0,13);
+            if(slice==="image caption"){
+                content = content.slice(13,content.length);
+            }
             let url = response.articles[i].url;
             let image_url = response.articles[i].urlToImage;
             if(i==0){
                 //console.log("*");
                 str += `
-                    <h3 class="title">${title}</h3>
+                    <h3 class="title" style="border-radius-top-left:10px; border-radius-top-right:10px">${title}</h3>
                     <div id="1" class="dropdown" style="display: block">
                         <div class="news-image-box"><img class="news-image" src="${image_url}" /></div>
                         <div class="news-title-box">${content}<a href="${url}">read more</a></div>
