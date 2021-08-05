@@ -1,0 +1,65 @@
+body{
+    width: 99.75vw;
+    height: 99.5vh;
+    /* border: red 2px solid; */
+    background-color: lightslategray;
+    margin: 0px;
+}
+
+#container{
+    height: 99%;
+    /* border: chartreuse 4px solid; */
+}
+
+#titleBox{
+    /* border:aqua 2px solid; */
+    margin-top: 5vh;
+    font-size: larger;
+}
+
+#websiteTitle{
+    /* border:greenyellow 2px solid; */
+    text-align: center;
+}
+
+#searchForm{
+    /* border: 2px solid red; */
+}
+
+#formContainer{
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 50%;
+    height: 10vh;
+    /* border: hotpink 2px solid; */
+}
+
+#search{
+    margin: 2vh 0vh;
+    width: 90%;
+    height: 2em;
+    border-radius: 5px;
+    box-shadow: grey;
+}
+
+#searchButton{
+    height: 2.5em;
+    border-radius: 5px;
+}
+
+#displayBox{
+    margin: auto;
+    /* border: 2px solid black; */
+    height: 62%;
+    width: 55%;
+    font-size: 1.4em;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+

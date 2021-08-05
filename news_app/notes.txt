@@ -1,0 +1,64 @@
+for(i in articles){
+    const title = response.articles[i].title;
+    const content = response.articles[i].content;
+    const image = response.articles[i].urlToImage;
+    const source = response.articles[i].source.name;
+    const url = response.articles[i].url;
+    let date = response.articles[i].publishedAt;
+    date = new Date(date);
+
+    
+    str += `
+        <div class="" style="width: 18rem;">
+            <img class="img-top col-xl" src="${image}" alt="Card image cap">
+            <div class="body col-xl">
+                <h5 class="card-title">${title}</h5>
+                <p class="card-text">${content}</p>
+                <a href="#" class="btn btn-primary"></a>
+            </div>
+        </div>
+        `;
+}
+
+
+
+
+const xhr = new XMLHttpRequest();
+xhr.open('GET','https://newsapi.org/v2/top-headlines?country=us&apiKey=061a4ff026d44d488358222b08620cca', true);
+xhr.onload = function() {
+    if(this.status==200){
+        const response = JSON.parse(this.responseText);
+        const articles = response.articles;
+        var str = "";
+        
+        const title = response.articles[0].title;
+        const content = response.articles[0].content;
+        const image = response.articles[0].urlToImage;
+        const source = response.articles[0].source.name;
+        const url = response.articles[0].url;
+        let date = response.articles[0].publishedAt;
+        date = new Date(date);
+
+        //document.getElementById('content').innerHTML = str;
+        
+        //response.articles[0].urlToImage
+        
+    }
+    else{
+        console.log("response status: "+this.status);
+    }
+}
+xhr.send();
+
+
+
+
+
+
+
+<div class="news-image-box">
+                    <img src="" alt="" class="news-image"/>
+                </div>
+                <div class="news-title-box">
+                    <h5 class="news-title">Worrying: Rahul Gandhi over rising cases of COVID-19 in Kerala</h5>
+                </div>
